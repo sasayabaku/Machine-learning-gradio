@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    image: haggingface-sandbox
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    user: root
+    tty: true
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
