@@ -9,6 +9,9 @@ services:
     user: root
     tty: true
 
+    ports:
+      - "7860:7860"
+
     deploy:
       resources:
         reservations:
@@ -16,3 +19,5 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
+
+    command: python3 chatbot.py

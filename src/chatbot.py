@@ -59,4 +59,4 @@ with gr.Blocks() as demo:
     input.submit(fn=chat, inputs=input, outputs=chatbot)
     input.submit(fn=lambda: "", inputs=None, outputs=input)
 
-demo.launch()
+demo.launch(share=False, server_name="0.0.0.0")
