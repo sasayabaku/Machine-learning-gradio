@@ -18,7 +18,7 @@ if __name__ == "__main__":
     )
 
     prompt = """Please write a quick sort code in Python.
-    Answer: """
+    Assistant: """
 
     with torch.no_grad():
         token_ids = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
